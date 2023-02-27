@@ -1,5 +1,80 @@
 
 body{
+    all: unset;
     background-color:var(--main-bg-color) ;
     color: var(--text-color);
 }
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    padding: 0 2rem;
+    border-bottom: 3px solid var(--hover-color);
+}
+
+.main{
+    width: 100%;
+    position: relative;
+    background-color: var(--secondary-bg-color);
+}
+/* 
+.mainBody{
+    position: absolute;
+    right:20%;
+    background-color: var(--secondary-bg-color);
+}
+
+.sidebar {
+    border-right: 3px solid var(--hover-color);
+    height: 100%;
+    position: fixed;
+    left: 0;
+    overflow-x: hidden;
+    padding: 2.5rem;
+    width: 20%;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sidebar li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .sidebar li a:hover {
+    background-color: #ddd;
+  }
+   */
+
+   .container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .sidebar {
+    width: 25%;
+    background-color: var(--main-bg-color);
+    padding: 20px;
+  }
+  
+  .main {
+    background-color: var(--secondary-bg-color);
+    width: 75%;
+    padding: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
