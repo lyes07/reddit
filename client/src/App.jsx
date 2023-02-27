@@ -5,8 +5,8 @@ import {UserContext} from './context/UserContext'
 import Home  from "./components/Home";
 
 const themes = {
-  light: 'public/style/light.css',
-  dark: 'public/style/dark.css',
+  light: 'src/style/light.css',
+  dark: 'src/style/dark.css',
 };
 
 const App = () => {

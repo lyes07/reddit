@@ -1,3 +1,5 @@
+create type del as ENUM('true','false');
+
 create table users(
     id BIGSERIAL primary key,
     name varchar(60) not null,
@@ -5,7 +7,7 @@ create table users(
     email varchar(100) not null,
     password varchar(255) not null,
     created_at timestamp with time zone default now(),
-    deleted enum('true','false') default 'false',
+    deleted del default 'false',
     constraint uk_users_name unique (name),
     constraint uk_users_email unique (email)
 );
@@ -23,9 +25,9 @@ create table posts(
     image text,
     category int not null,
     posted_at timestamp with time zone default now(),
-    deleted enum('true','false') default 'false',
+    deleted del default 'false',
     FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (category) REFERENCES categorys(id),
+    FOREIGN KEY (category) REFERENCES categorys(id)
 );
 
 create table comments(
@@ -34,7 +36,18 @@ create table comments(
     user_id bigint not null,
     description text not null,
     commented_at timestamp with time zone default now(),
-    deleted enum('true','false') default 'false',
+    deleted del default 'false',
     FOREIGN KEY (post_id) REFERENCES posts(id),
-    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+// All  categorys
+
+insert into categorys(name) values('Gaming');
+insert into categorys(name) values('Sports');
+insert into categorys(name) values('News');
+insert into categorys(name) values('Movies');
+insert into categorys(name) values('Novels');
+insert into categorys(name) values('Art');
+insert into categorys(name) values('Programming');
+
