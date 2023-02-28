@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeSwitcherProvider } from 'react-css-theme-switcher';
 import { BrowserRouter , Routes , Route } from "react-router-dom";
 import {UserContext} from './context/UserContext'
-import Home  from "./components/Home";
+import Home  from "./routes/Home";
 
 const themes = {
   light: 'src/style/light.css',

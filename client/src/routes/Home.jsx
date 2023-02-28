@@ -1,7 +1,7 @@
 import React from 'react'
-import Main from './Main'
-import NavBar from './NavBar'
-import SideBar from './SideBar'
+import Main from '../components/Main'
+import NavBar from '../components/NavBar'
+import SideBar from '../components/SideBar'
 
 
 const Home = () => {
