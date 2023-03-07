@@ -1,15 +1,23 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+import { useThemeSwitcher } from 'react-css-theme-switcher';
+
 
 const NavBar = () => {
-  const buttonStyles = {
-    backgroundColor: "#0077ff",
-    color: "#fff",
-    border: "none",
-    borderRadius: "4px",
-    padding: "10px 20px",
-    margin: "0 10px",
-    cursor: "pointer",
-  };
+    const { switcher, themes, currentTheme, status } = useThemeSwitcher();
+    const [isDarkMode, setIsDarkMode] = React.useState(false);
+  
+    if (status === 'loading') {
+      return <div>Loading styles...</div>;
+    }
+  
+    const toggleDarkMode = () => {
+      setIsDarkMode(previous => {
+        switcher({ theme: previous ? themes.light : themes.dark });
+        return !previous;
+      });
+    };
+  
   
   return (
     <nav className="navbar" >
@@ -17,12 +25,19 @@ const NavBar = () => {
         Logo
       </div>
       <div className="navbar-right">
-        <button style={buttonStyles} className="signin-button">
-          Sign In
+        <Link to={'login'}> 
+        <button className="button login-button">
+          Log In
         </button>
-        <button style={buttonStyles} className="theme-switch-button">
-          Theme Switch
+        </Link>
+        <Link to={'signup'}> 
+        <button className="button signup-button">
+          Sign Up
         </button>
+        </Link>
+        <button className="button theme-switch-button" onClick={toggleDarkMode}>
+          {currentTheme}
+        </button> 
       </div>
     </nav>
   )
@@ -31,5 +46,3 @@ const NavBar = () => {
 export default NavBar
 
 
-
-// Define styles as objects

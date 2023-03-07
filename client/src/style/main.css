@@ -82,5 +82,133 @@ hr {
   border-top: 3px solid var(--secondary-bg-color);
   margin: 1em 0;
   padding-top: 1rem;
-  }
+}
   
+
+.button{
+  background-color: #0077ff;
+  color : var(--text-color);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+
+
+.ls-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.ls-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: var(--main-bg-color);
+  box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.ls-title {
+  margin-top: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.ls-btn {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #008080;
+  color: var(--text-color);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.ls-btn:hover {
+  background-color: #006666;
+}
+
+label {
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--hover-color);
+  border: 1px solid var(--secondary-bg-color);
+  font-size: 16px;
+}
+
+
+
+
+
+
+ .login-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid var(--secondary-bg-color);
+  border-radius: 5px;
+  background-color: var(--main-bg-color);
+  box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.name-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-name {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.last-name {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+button[type="submit"],
+input[type="file"] {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid var(--secondary-bg-color);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
