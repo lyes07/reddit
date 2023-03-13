@@ -15,6 +15,14 @@ html,body{
   border-bottom: 3px solid var(--hover-color);
 }
 
+.navbar-left{
+  height: 40px;
+}
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+}
 
 .container {
   display: flex;
@@ -46,8 +54,9 @@ html,body{
   overflow: auto;
   height :100%;
   padding: 2rem;
-
 }
+
+
 
 .sidebar ul {
   list-style-type: none;
@@ -67,14 +76,6 @@ html,body{
   background-color: var(--hover-color);
 }
 
-.card {
-  border: 2px solid var(--hover-color);
-  background-color: var(--main-bg-color);
-  border-radius: 4px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
 hr {
   display: block;
   height: 10px;
@@ -85,8 +86,22 @@ hr {
 }
   
 
+
+
+
+
+.card {
+  border: 2px solid var(--hover-color);
+  background-color: var(--main-bg-color);
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+
+
 .button{
-  background-color: #0077ff;
+  background-color: var(--button-color);
   color : var(--text-color);
   border: none;
   border-radius: 4px;
@@ -95,6 +110,11 @@ hr {
   cursor: pointer;
 }
 
+.theme-switch-button{
+  background-color: #8CFAE8;
+  border-radius: 6px;
+  font-weight: 600;
+}
 
 
 .ls-container {
@@ -152,6 +172,41 @@ input {
   border: 1px solid var(--secondary-bg-color);
   font-size: 16px;
 }
+
+.ls-back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: none;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.ls-signup-message {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.ls-signup-message p {
+  margin: 0;
+}
+
+.ls-signup-message a {
+  margin-left: 5px;
+  color: #008080;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.ls-signup-message a:hover {
+  text-decoration: underline;
+}
+
+
+
+
 
 
 
@@ -211,4 +266,30 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #3e8e41;
+}
+
+
+
+
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 6px;
+}
+
+.loading {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

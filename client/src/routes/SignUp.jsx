@@ -44,6 +44,7 @@ function SignUp() {
 
   return (
     <div className="login-container">
+      <button onClick={() => window.history.back()} className="ls-back-btn">&#8592; Go Back</button>
       <form onSubmit={submit}>
         <div className="name-container">
           <div className="first-name">
@@ -96,7 +97,7 @@ function SignUp() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit">Log In</button>
+        <button type="submit">Sign Up</button>
       </form>
     </div>
   );
