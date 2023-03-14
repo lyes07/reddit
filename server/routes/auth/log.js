@@ -1,5 +1,11 @@
+const express = require('express')
+const router = express.Router()
+const db = require('../../db/index')
+const bcrypt = require('bcryptjs')
 
-app.post('/login', async (req, res) => {
+
+
+router.post('/login', async (req, res) => {
     const { email, password } = req.body
 
     if (email == null || password == null) {
@@ -8,7 +14,7 @@ app.post('/login', async (req, res) => {
 
     try {
         const data = await db.query(
-            'SELECT id, name, age, email, password FROM users WHERE email = $1',
+            'SELECT * FROM users WHERE email = $1',
             [email]
         )
 
@@ -39,7 +45,7 @@ app.post('/login', async (req, res) => {
     }
 })
 
-app.post('/logout', async (req, res) => {
+router.post('/logout', async (req, res) => {
     try {
         await req.session.destroy()
         res.clearCookie('connect.sid', {path: '/'})
@@ -49,3 +55,6 @@ app.post('/logout', async (req, res) => {
         return res.sendStatus(500)
     }
 })
+
+
+module.exports = router

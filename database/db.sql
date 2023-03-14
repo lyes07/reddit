@@ -12,6 +12,8 @@ create table users(
     constraint uk_users_email unique (email)
 );
 
+insert into users(name,age,email,password) values ('lyes',20,'lyes@gmail.com','$2a$10$n/KIoMhoKpPO3CjcbZhlJeMdY38QCbGFBpvvd/wV6eI/ADkVLpCn2');
+
 create table categorys(
     id serial primary key,
     name varchar(100) not null, 

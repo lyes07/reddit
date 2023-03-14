@@ -5,6 +5,7 @@ const cors = require('cors')
 const session = require('express-session')
 const bcrypt = require('bcryptjs')
 const categorysRoute = require('./routes/categorys')
+const logRoute = require('./routes/auth/log')
 
 
 const app = express()
@@ -38,5 +39,8 @@ app.use(
 
 // get all the categorys for the side bar
 app.use('/api/v1/categorys',categorysRoute) 
+
+app.use('/api/v1/auth',logRoute) 
+
 
 app.listen(port, () => console.log(`server listening on port ${port}!`))
